@@ -6,11 +6,7 @@ pipeline {
         }
     } */
     agent any
-    tools {
-            maven '3.2.3'
-            jdk 'jdk-17'
-    }
-        stages {
+    stages {
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
